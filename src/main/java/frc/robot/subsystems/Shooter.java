@@ -14,15 +14,13 @@ import static frc.robot.Constants.*;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 
 
-public class ExampleSubsystem extends SubsystemBase {
+public class Shooter extends SubsystemBase {
   
   public final  WPI_TalonFX shooty = new  WPI_TalonFX(shooterMotorID);
   
-  public CommandBase stop() {
+  public CommandBase motorSpin() {
 
     return new RunCommand(() -> shooty.set(0.1), this);
 
   }
 }
-
-//Motor ID 5
